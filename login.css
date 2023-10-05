@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Noto+Sans+Mahajani&family=Old+Standard+TT&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #051525;
+    font-family: 'ADLaM Display', cursive;
+    font-family: 'Noto Sans Mahajani', sans-serif;
+    font-family: 'Old Standard TT', serif;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: #051525;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.text_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.text_field input{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 5px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.text_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.text_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #051525;
+    transition: .5s;
+}
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+    top: -5px;
+    color: #051525;
+}
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: red;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50%;
+    border: 1px solid;
+    background: #051525;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #051525;
+    transition: .5s;
+}
+.signup-link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup-link a{
+    color: #051525;
+    text-decoration: none;
+}
+.signup-link a:hover{
+    text-decoration: underline;
+}
